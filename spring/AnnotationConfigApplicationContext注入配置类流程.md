@@ -73,7 +73,3 @@
    ```
 
    <img src="https://raw.githubusercontent.com/itlixudong/Image/main/img/20210227205035.png"  />
-
-6. 执行refresh()方法
-
-7. 
