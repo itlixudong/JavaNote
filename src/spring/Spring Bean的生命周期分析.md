@@ -45,9 +45,9 @@ Spring Bean的生命周期，简单可以理解为，对象创建，初始化，
 
 6. 执行doCreateBean(beanName, mbdToUse, args)方法
 
-7. 执行createBeanInstance(beanName, mbd, args)方法，对bean进行初始化
+7. 执行createBeanInstance(beanName, mbd, args)方法，创建bean实例
 
-8. 执行populateBean(beanName, mbd, instanceWrapper)方法给对象中的属性设置值，接着执行initializeBean(beanName, exposedObject, mbd)方法
+8. 执行populateBean(beanName, mbd, instanceWrapper)方法给对象中的属性设置值，接着执行initializeBean(beanName, exposedObject, mbd)方法来初始化
 
 9. 执行invokeAwareMethods(beanName, bean)方法来判断我们的类是否实现了aware接口，执行到applyBeanPostProcessorsBeforeInitialization(wrappedBean, beanName)方法进行前置处理，在inti方法之前执行，对类做增强，接着执行到invokeInitMethods(beanName, wrappedBean, mbd)方法去调用我们自定义的init方法，然后执行到applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName)方法进行后置处理
 
